@@ -1,0 +1,40 @@
+.pagination
+  width: fit-content
+
+  .swiper-pagination-bullet
+    width: 12px
+    height: 12px
+    margin: 0 6px
+    border-radius: 0
+    background: #a2a2a2
+    cursor: pointer
+
+  .swiper-pagination-bullet-active
+    background: $color-orange
+
+  +max-w(1400)
+
+    .swiper-pagination-bullet
+      width: 8px
+      height: 8px
+      margin: 0 4.5px
+
+  +max-w(768)
+    .swiper-pagination-bullet
+      width: 12px
+      height: 12px
+      margin: 0 8px
+
+  +max-w(480)
+    .swiper-pagination-bullet
+      width: 8px
+      height: 8px
+      margin: 0 4.5px
+
+  &--white
+    .swiper-pagination-bullet
+      background: #fff
+      opacity: 1
+
+    .swiper-pagination-bullet-active
+      background: $color-orange

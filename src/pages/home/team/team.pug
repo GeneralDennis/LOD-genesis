@@ -1,0 +1,70 @@
+-
+  var items =
+    [
+      {
+        name: 'Ivanenko Serghey',
+        occupy: 'CEO',
+        photo: 'images/photos/SI.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Verlaty Aleksander',
+        occupy: 'Black Magic',
+        photo: 'images/photos/VA.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Dubov Leonid',
+        occupy: 'Game Designer',
+        photo: 'images/photos/DL.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Ro Nast',
+        occupy: 'Mother of Art',
+        photo: 'images/photos/RN.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Ivanenko Serghey',
+        occupy: 'CEO',
+        photo: 'images/photos/SI.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Verlaty Aleksander',
+        occupy: 'Black Magic',
+        photo: 'images/photos/VA.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Dubov Leonid',
+        occupy: 'Game Designer',
+        photo: 'images/photos/DL.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      },
+      {
+        name: 'Ro Nast',
+        occupy: 'Mother of Art',
+        photo: 'images/photos/RN.png',
+        about: 'Do not seek to change what has come before. Seek to create that which has not.'
+      }
+    ]
+
+section.team
+  h2.title.title--white.team__title
+    | meet
+    span our team
+
+  .team__slider
+    .team-swiper-container.swiper-container
+      .swiper-wrapper
+        each item in items
+          .swiper-slide.team__slide
+            img(src=item.photo, alt="").team__slide-avatar
+            .team__slide-name=item.name
+            .team__slide-occupy=item.occupy
+            .team__slide-about=item.about
+
+  .pagination.pagination--white.team__slider-pagination
+

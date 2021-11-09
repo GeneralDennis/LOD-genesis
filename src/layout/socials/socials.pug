@@ -1,0 +1,28 @@
+-
+  var socials =
+    [
+      {
+        src: 'images/socials/fb.png',
+        link: 'fb'
+      },
+      {
+        src: 'images/socials/tw.png',
+        link: 'tw'
+      },
+      {
+        src: 'images/socials/google.png',
+        link: 'google'
+      },
+      {
+        src: 'images/socials/in.png',
+        link: 'in'
+      },
+      {
+        src: 'images/socials/dribble.png',
+        link: 'dribble'
+      }
+    ]
+
+each social in socials
+  a(href=social.link).socials__link
+    img(src=social.src, alt="")

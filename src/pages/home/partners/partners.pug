@@ -1,0 +1,48 @@
+-
+  var items =
+    [
+      {
+        link: '/chanel',
+        img: 'images/partners/chanel.png'
+      },
+      {
+        link: '/zara',
+        img: 'images/partners/zara.png'
+      },
+      {
+        link: '/guerlain',
+        img: 'images/partners/guerlain.png'
+      },
+      {
+        link: '/lancome',
+        img: 'images/partners/lancome.png'
+      },
+      {
+        link: '/lacoste',
+        img: 'images/partners/lacoste.png'
+      },
+
+    ]
+
+section.partners
+  h2.title.partners__title
+    | some of our
+    span partners
+
+  .partners__slider
+    .partners-swiper-container.swiper-container
+      .swiper-wrapper
+        .swiper-slide.partners__slide
+          each item in items
+            a(href=item.link).partners__slide-link
+              img(src=item.img, alt="")
+        .swiper-slide.partners__slide
+          each item in items
+            a(href=item.link).partners__slide-link
+              img(src=item.img, alt="")
+        .swiper-slide.partners__slide
+          each item in items
+            a(href=item.link).partners__slide-link
+              img(src=item.img, alt="")
+
+  .pagination.partners__pagination

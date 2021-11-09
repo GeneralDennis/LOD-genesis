@@ -1,0 +1,71 @@
+-
+  var items =
+    [
+      {
+        id: 1,
+        title: "1Q' 2022",
+        text: '111"Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+        name: 'Dean Martin',
+        position: 'CEO Acme Inc.'
+      },
+      {
+        id: 2,
+        title: "1Q' 2022",
+        text: '222This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+        name: 'Dean Martin',
+        position: 'CEO Acme Inc.'
+      },
+      {
+        id: 3,
+        title: "1Q' 2022",
+        text: '333s, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+        name: 'Dean Martin',
+        position: 'CEO Acme Inc.'
+      },
+      {
+        id: 4,
+        title: "1Q' 2022",
+        text: '444This book is a treatise on the theory of he Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+        name: 'Dean Martin',
+        position: 'CEO Acme Inc.'
+      },
+      {
+        id: 5,
+        title: "1Q' 2022",
+        text: '555This book is a treatise on the theory of ethics, very popular during the Renaissance comes from a line in section 1.10.32.',
+        name: 'Dean Martin',
+        //- position: 'CEO Acme Inc.'
+      }
+    ]
+
+section.roadmap
+  img(src="images/roadmap.png", alt="").roadmap__bg
+  h2.title.title--white.roadmap__title
+    span roadmap
+  .roadmap__nav
+    img(src="images/arrow.png", alt="").roadmap__nav-prev
+    .roadmap__nav-title Keep scrolling to preview the roadmap
+    img(src="images/arrow.png", alt="").roadmap__nav-next
+
+  .roadmap__wrap
+    .roadmap__thumbs
+      .roadmap__thumbs-items
+        each item in items
+          .roadmap__thumbs-item(data-id=item.id)=item.title
+
+      .roadmap__thumbs-cards
+        each item in items
+          .roadmap__card(data-id=item.id)
+            .roadmap__card-text=item.text
+            .roadmap__card-author
+              span=item.name
+              if item.position
+                |,
+                span.roadmap__card-position=item.position
+
+      .roadmap__pagination
+        each item in items
+          .roadmap__pagination-item(data-id=item.id)
+
+
+

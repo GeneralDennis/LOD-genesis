@@ -1,0 +1,56 @@
+-
+  var links =
+    [
+      {
+        title: 'about',
+        link: '#about'
+      },
+      {
+        title: 'advantages',
+        link: '#advantages'
+      },
+      {
+        title: 'roadmap',
+        link: '#roadmap'
+      },
+      {
+        title: 'tokenomy',
+        link: '#tokenomy'
+      },
+      {
+        title: 'team',
+        link: '#team'
+      },
+      {
+        title: 'partners',
+        link: '#partners'
+      },
+      {
+        title: 'gitbook',
+        link: '#gitbook'
+      },
+      {
+        title: 'gallery',
+        link: '#gallery'
+      }
+    ]
+
+header.header
+  .header__content
+    a(href="/").header__logo
+      img(src="images/logo.png", alt="LOD logo")
+    .header__nav
+      each item in links
+        a.header__nav-item(href=item.link)=item.title
+      .header__socials
+        include ../socials/socials
+      a(href="").header__log login
+    .header__lang
+      .header__lang-active ENG
+      img(src="images/v.png", alt="")
+      .header__lang-items
+        .header__lang-item(data-lang='RU') RU
+        .header__lang-item(data-lang='ENG') ENG
+    a(href="").header__log login
+    .header__burger
+      span

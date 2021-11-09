@@ -1,0 +1,301 @@
+.roadmap
+  position: relative
+
+  &::before
+    position: absolute
+    display: block
+    content: ''
+    max-width: 1280px
+    width: 100%
+    height: 100%
+    padding-left: 110px
+    left: 50%
+    top: 0
+    border-left: 2px solid#aaaaaa
+    transform: translateX(-50%)
+    z-index: 1
+
+    +max-w(1366)
+      max-width: 1024px
+      padding-left: 90px
+
+    +max-w(1150)
+      max-width: 760px
+      padding-left: 65px
+
+    +max-w(840)
+      max-width: unset
+      left: 0
+      bottom: 123px
+      top: auto
+      padding-left: 0
+      border-left: none
+      border-bottom: 2px solid#aaaaaa
+      transform: translateX(0)
+
+    +max-w(520)
+      bottom: 72px
+      border-color: #a8a8a8
+
+.roadmap__bg
+  position: absolute
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.roadmap__title
+  padding-top: 128px
+  margin-bottom: 68px
+
+  +max-w(1150)
+    padding-top: 75px
+    margin-bottom: 61px
+
+  +max-w(840)
+    padding-top: 109px
+    margin-bottom: 45px
+
+  +max-w(520)
+    padding-top: 63px
+    margin-bottom: 25px
+
+.roadmap__wrap
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 100%
+  max-width: 1280px
+  width: 100%
+  margin: 0 auto
+  padding: 0 0 190px 110px
+  z-index: 2
+
+  +max-w(1366)
+    max-width: 1024px
+    padding: 0 0 190px 80px
+
+  +max-w(1150)
+    max-width: 760px
+    padding: 0 0 113px 65px
+
+  +max-w(840)
+    max-width: unset
+    padding: 0 0 118px 0
+
+  +max-w(520)
+    padding: 0 0 67px 0
+
+.roadmap__thumbs
+  display: flex
+
+  +max-w(840)
+    flex-direction: column
+
+.roadmap__thumbs-items
+  flex-shrink: 0
+
+  +max-w(840)
+    display: none
+
+.roadmap__card-position
+  padding-left: 4px
+
+.roadmap__thumbs-item
+  position: relative
+  flex-shrink: 0
+  padding: 16px 60px
+  max-width: 213px
+  width: 100%
+  color: rgba(#fff, .5)
+  border: 4px solid $color-orange
+  background: transparent
+  transition: background .3s, color .3s
+  cursor: pointer
+
+  &::before
+    position: absolute
+    display: block
+    content: ''
+    width: 12px
+    height: 12px
+    left: -118.5px
+    top: 50%
+    background: #fff
+    transform: translateY(-50%)
+    transition: background .3s
+
+    +max-w(1366)
+      left: -89.5px
+
+    +max-w(1150)
+      height: 8px
+      width: 8px
+      left: -70px
+
+
+  &--active,&:hover
+    color: #fff
+    background: $color-orange
+
+    &::before
+      background: $color-orange
+
+  &:not(:last-child)
+    margin-bottom: 30px
+
+    +max-w(1150)
+      margin-bottom: 20px
+
+  +max-w(1150)
+    padding: 9px 32px
+    max-width: unset
+    font-size: 14px
+    border-width: 2px
+
+.roadmap__thumbs-cards
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  max-width: 754px
+  padding: 0 73px 0 86px
+  margin-left: 80px
+  border: 4px solid $color-orange
+
+  +max-w(1150)
+    max-width: 450px
+    padding: 0 44px 0 51px
+    margin-left: 45px
+    border-width: 2px
+
+  +max-w(840)
+    max-width: 520px
+    height: 402px
+    padding: 80px 54px 90px 40px
+    margin: 0 auto 50px
+    font-size: 23px
+    border-width: 4px
+
+  +max-w(520)
+    height: 236px
+    max-width: 306px
+    padding: 48px 32px 54px 23px
+    margin-bottom: 32px
+    font-size: 13px
+
+
+.roadmap__card
+  display: none
+  &:first-child
+    display: block
+
+.roadmap__card-text
+  margin-bottom: 36px
+  font-size: 23px
+  font-weight: 500
+  line-height: 1.2
+  text-transform: uppercase
+  color: #e7e7e7
+  text-align: center
+
+  +max-w(1150)
+    margin-bottom: 21px
+    font-size: 14px
+
+  +max-w(840)
+    font-size: 32px
+
+  +max-w(520)
+    font-size: 13px
+
+.roadmap__card-author
+  font-size: 23px
+  font-weight: 600
+  color: #b2b2b2
+  text-align: center
+
+  +max-w(1150)
+    font-size: 14px
+
+  +max-w(840)
+    font-size: 32px
+
+  +max-w(520)
+    font-size: 13px
+
+.roadmap__card-position
+  font-weight: 300
+
+.roadmap__nav
+  position: relative
+  display: none
+  align-items: center
+  justify-content: space-between
+  z-index: 2
+
+  +max-w(840)
+    display: flex
+    max-width: 520px
+    padding: 0 6px
+    margin: 0 auto 24px
+
+  +max-w(520)
+    max-width: 306px
+    padding: 0 5px
+    margin-bottom: 14px
+
+
+
+.roadmap__nav-next
+  transform: rotate(180deg)
+
+.roadmap__nav-next, .roadmap__nav-prev
+  height: 65px
+  width: 65px
+  transition: opacity .3s
+  object-fit: cover
+  &--disable
+    opacity: 0.5
+    cursor: disabled
+
+  +max-w(520)
+    height: 38px
+    width: 38px
+
+.roadmap__nav-title
+  max-width: 277px
+  font-size: 23px
+  line-height: 30px
+  color: #e7e7e7
+  font-weight: 600
+  text-align: center
+
+  +max-w(520)
+    max-width: 162px
+    font-size: 13px
+    line-height: 17px
+
+
+.roadmap__pagination
+  display: none
+
+  +max-w(840)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 360px
+    width: 100%
+    margin: 0 auto
+
+  +max-w(520)
+    max-width: 214px
+
+.roadmap__pagination-item
+  height: 12px
+  width: 12px
+  background: #fff
+  transition: background .3s
+
+  &--active
+    background: $color-orange

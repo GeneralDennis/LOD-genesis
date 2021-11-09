@@ -1,0 +1,38 @@
+-
+  var items =
+    [
+      {
+        title: 'Alchemy',
+        text: 'is the alchemical laboratory. Here you create the main magic of the island by combining magical ingredients and creating new unknown creatures with which you can take over the world',
+        img: 'images/about-slider-1.png'
+      },
+      {
+        title: 'Alchemy',
+        text: 'is the alchemical laboratory. Here you create the main magic of the island by combining magical ingredients and creating new unknown creatures with which you can take over the world',
+        img: 'images/about-slider-1.png'
+      },
+      {
+        title: 'Alchemy',
+        text: 'is the alchemical laboratory. Here you create the main magic of the island by combining magical ingredients and creating new unknown creatures with which you can take over the world',
+        img: 'images/about-slider-1.png'
+      }
+    ]
+
+
+
+
+section.about
+  h2.about__title about us
+
+  .about__slider
+    .about-swiper-container.swiper-container
+      .swiper-wrapper
+        each item in items
+          .swiper-slide.about__slide
+            img(src=item.img, alt="").about__slide-img
+            .about__slide-content
+              h4.about__slide-title=item.title
+              .about__slide-text
+                p=item.text
+
+    .pagination.about__slider-pagination

@@ -1,0 +1,254 @@
+.welcome
+  width: 100%
+  padding: 0 11%
+  margin-bottom: 150px
+
+  +max-w(1600)
+    margin-bottom: 90px
+    padding: 0 65px
+
+  +max-w(960)
+    margin-bottom: 60px
+    padding: 0
+
+  +max-w(480)
+    margin-bottom: 34px
+
+.welcome__content
+  position: relative
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  width: 100%
+  margin: 0 auto
+  padding: 184px 28px 94px 90px
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  +max-w(1220)
+    padding: 184px 17px 94px 56px
+
+  +max-w(960)
+    height: 615px
+    padding: 181px 0px 211px 64px
+
+    img
+      height: 357px
+      top: auto
+      bottom: 0
+
+  +max-w(480)
+    height: unset
+    padding: 106px 0px 124px 35px
+
+    img
+      height: 210px
+
+
+.welcome__title
+  margin-bottom: 35px
+  font-size: 56px
+  line-height: 1
+  color: #000
+  text-transform: uppercase
+  font-weight: 300
+  letter-spacing: -2.2px
+
+  p
+    display: inline-block
+    margin: 0
+    font-weight: 700
+    color: $color-orange
+
+    span
+      display: none
+      padding-left: 10px
+
+  +max-w(1220)
+    margin-bottom: 20px
+    font-size: 34px
+
+  +max-w(960)
+    margin-bottom: 26px
+    font-size: 46px
+    line-height: 60px
+    p
+      display: block
+
+      span
+        display: inline-block
+        padding-left: 5px
+
+  +max-w(480)
+    margin-bottom: 14px
+    font-size: 26px
+    line-height: 1
+    letter-spacing: -1.76px
+
+
+.welcome__subtitle
+  font-size: 26px
+  line-height: 1
+  color: #000
+  letter-spacing: -1px
+
+  span
+    font-weight: 700
+    padding: 0 6px
+
+  +max-w(1220)
+    font-size: 15px
+
+  +max-w(960)
+    max-width: 450px
+    font-size: 30px
+    line-height: 1.25
+
+  +max-w(480)
+    max-width: 263px
+    font-size: 18px
+
+.welcome__text
+  position: relative
+  padding-top: 24px
+  margin-right: 10px
+
+  +max-w(1220)
+    padding-top: 14px
+
+
+.welcome__sales
+  position: relative
+  max-width: 470px
+  width: 100%
+  padding: 40px 40px 37px
+  background: rgba(255, 255, 255, .63)
+
+  +max-w(1220)
+    max-width: 280px
+    padding: 24px 22px 23px
+
+  +max-w(960)
+    display: none
+
+  &--bottom
+    display: block
+    max-width: 470px
+    width: 100%
+    margin: 0 auto
+    padding: 40px 40px 37px
+
+    +max-w(480)
+      max-width: 275px
+      padding: 22px 24px 24px
+      margin: 0 auto
+
+
+.welcome__sales-title
+  margin: 0 auto 29px
+  width: fit-content
+  font-size: 44px
+  line-height: 1
+  font-weight: 700
+  letter-spacing: -1.7px
+  text-transform: uppercase
+  color: $color-orange
+
+  +max-w(1220)
+    margin-bottom: 17px
+    font-size: 26px
+
+  +max-w(960)
+    margin-bottom: 31px
+    font-size: 44px
+
+  +max-w(480)
+    margin-bottom: 17px
+    font-size: 26px
+
+.welcome__sales-item
+  margin-bottom: 32px
+
+  +max-w(1220)
+    margin-bottom: 20px
+
+  +max-w(960)
+    margin-bottom: 35px
+
+  +max-w(480)
+    margin-bottom: 21px
+
+.welcome__sales-name
+  font-size: 31px
+  font-weight: 700
+  letter-spacing: -1.2px
+
+  +max-w(1220)
+    font-size: 18px
+
+  +max-w(960)
+    font-size: 31px
+
+  +max-w(480)
+    font-size: 18px
+
+.welcome__sales-date, .welcome__sales-rise
+  font-size: 26px
+  line-height: 1.25
+  letter-spacing: -1px
+
+  +max-w(1220)
+    font-size: 15px
+
+  +max-w(960)
+    font-size: 26px
+
+  +max-w(480)
+    font-size: 15px
+
+
+.welcome__sales-date
+  font-weight: 700
+  span
+    padding-left: 5px
+    font-weight: 400
+
+.welcome__sales-rise
+  font-weight: 400
+  span
+    padding-left: 5px
+    font-weight: 700
+
+.welcome__buy
+  display: block
+  width: fit-content
+  margin: 0 auto
+  padding: 15px 85px 15px
+  font-size: 23px
+  color: #fff
+  background: $color-orange
+  line-height: 1
+  text-transform: uppercase
+  text-decoration: none
+
+  +max-w(480)
+    padding: 9px 50px
+    font-size: 14px
+
+.welcome__bottom
+  display: none
+  padding: 63px 0 65px
+  background-color: #dcdcdc
+
+  +max-w(960)
+    display: block
+    padding: 63px 0 64px
+  +max-w(480)
+    padding: 37px 0

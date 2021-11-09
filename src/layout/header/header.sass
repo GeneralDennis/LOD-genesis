@@ -1,0 +1,313 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 8px 0
+  z-index: 10
+
+  +max-w(950)
+    padding: 22px 0
+
+  +max-w(768)
+    padding: 15px 0
+
+  +max-w(480)
+    padding: 12px 0
+
+.header__content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding: 0 11%
+
+  +max-w(1600)
+    padding: 0 65px
+
+  +max-w(960)
+    padding: 0
+
+.header__logo
+  position: relative
+  display: block
+  flex-shrink: 0
+  width: 145px
+  margin-left: 21px
+  z-index: 20
+
+  img
+    display: block
+    width: 100%
+    height: 100%
+
+  +max-w(1550)
+    margin-left: 12px
+    width: 100px
+
+  +max-w(1230)
+    width: 86px
+
+  +max-w(950)
+    width: 145px
+    margin-left: 33px
+
+  +max-w(480)
+    width: 85px
+    margin-left: 22px
+
+.header__nav
+  display: flex
+  max-width: 918px
+  width: 100%
+  height: 100%
+  margin: 0 5px 0 auto
+  align-items: center
+  justify-content: space-between
+  transition: opacity .5s, right .3s
+
+  .header__log
+    display: none
+
+  +max-w(950)
+    position: absolute
+    width: 100%
+    right: -100%
+    height: 100%
+    margin: 0
+    top: 0
+    padding-top: 128px
+    flex-direction: column
+    background: #fff
+    opacity: 0
+    z-index: -1
+
+    .header__log
+      display: block
+
+  &--open
+    display: flex
+    height: 100vh
+    right: 0%
+    opacity: 1
+    z-index: 10
+
+.header__nav-item
+  position: relative
+  display: block
+  padding: 0 8px
+  text-decoration: none
+  font-size: 18px
+  line-height: 1.66
+  text-transform: uppercase
+  color: #010101
+  font-weight: 700
+
+  &::after
+    position: absolute
+    content: ''
+    display: block
+    left: 50%
+    bottom: -6px
+    height: 4px
+    width: 0%
+    background-color: $color-orange
+    transform: translateX(-50%)
+    transition: width .3s
+
+  &:hover, &--active
+    &::after
+      width: 100%
+
+  +max-w(1550)
+    font-size: 14px
+
+  +max-w(1230)
+    padding: 0 5px
+    font-size: 11px
+
+  +max-w(950)
+    margin-bottom: 30px
+
+  +max-w(480)
+    margin-bottom: 10px
+
+.header__lang
+  position: relative
+  display: flex
+  align-items: baseline
+  padding: 20px 23px 18px
+  margin: 0 5px
+  border: 1px solid rgba(0, 0, 0, .5)
+  border-radius: 2px
+  font-size: 16px
+  text-transform: uppercase
+  color: #616161
+  letter-spacing: 0.3px
+  line-height: 1
+  cursor: pointer
+
+  img
+    display: block
+    height: 9px
+    width: 11px
+    margin-left: 7px
+    transition: transform .3s
+
+  &--active
+    img
+      transform: rotate(180deg)
+
+  +max-w(1550)
+    font-size: 13px
+    padding: 18px 20px 16px
+
+  +max-w(1230)
+    font-size: 10px
+    padding: 12px 14px 12px
+
+    img
+      height: 6px
+      width: 7px
+      margin-left: 4px
+
+  +max-w(950)
+    display: none
+
+.header__lang-items
+  position: absolute
+  display: none
+  top: 115%
+  left: 0
+  width: 100%
+  padding: inherit
+  border: inherit
+
+.header__lang-item
+  position: relative
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  &::after
+    position: absolute
+    content: ''
+    display: block
+    left: 50%
+    bottom: -4px
+    height: 4px
+    width: 0%
+    background-color: $color-orange
+    transform: translateX(-50%)
+    transition: width .3s
+
+  &:hover
+    &::after
+      width: 100%
+
+.header__log
+  flex-shrink: 1
+  padding: 16px 41px 18px
+  margin: 0 0 0 5px
+  font-size: 23px
+  line-height: 1
+  font-weight: 400
+  text-transform: uppercase
+  color: #fff
+  background: $color-orange
+  text-decoration: none
+
+  +max-w(1550)
+    padding: 14px 25px 15px
+    font-size: 20px
+
+  +max-w(1230)
+    padding: 10px 22px
+    font-size: 14px
+
+  +max-w(950)
+    display: none
+
+.header__burger
+  position: relative
+  display: none
+  height: 32px
+  width: 46px
+  margin-right: 33px
+  transition: width .3s
+  cursor: pointer
+  z-index: 20
+
+  &::after, &::before, span
+    position: absolute
+    display: block
+    top: 50%
+    left: 0
+    height: 7px
+    width: 100%
+    background: #000
+    border-radius: 7px
+    transition: top .3s, left .3s, transform .3s, background .3s
+
+  span
+    transform: translateY(-50%)
+
+  &::after
+    content: ''
+    top: 0
+
+  &::before
+    content: ''
+    top: auto
+    bottom: 0
+
+  &--open
+    width: 32px
+
+    span
+      background: transparent
+
+    &::after
+      top: 12px
+      left: -6px
+      width: 41px
+      transform: rotate(45deg)
+
+    &::before
+      top: 12px
+      left: -6px
+      width: 41px
+      transform: rotate(-45deg)
+
+  +max-w(950)
+    display: block
+
+  +max-w(480)
+    width: 26px
+    height: 18px
+    margin-right: 22px
+
+    &::after, &::before, span
+      height: 4px
+
+    &--open
+      width: 18px
+
+      &::after,&::before
+        top: 7px
+        left: -3px
+        width: 24px
+.header__socials
+  display: none
+
+  +max-w(950)
+    display: flex
+    margin-bottom: 30px
+    .socials__link
+      &:not(:last-child)
+        margin-right: 15px
+
+  +max-w(480)
+    margin-bottom: 15px
+    .socials__link
+      height: 25px
+      width: 25px

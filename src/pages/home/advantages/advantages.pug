@@ -1,0 +1,52 @@
+- var images = ['images/about-slider-1.png', 'images/about-slider-1.png', 'images/about-slider-1.png']
+
+-
+  var items =
+    [
+      {
+        name: 'Mission',
+        text: 'We deliver uniqueness and quality'
+      },
+      {
+        name: 'Skills',
+        text: 'Delivering fast and excellent results'
+      },
+      {
+        name: 'Clients',
+        text: 'Satisfied clients thanks to our experience'
+      }
+    ]
+
+section.advantages
+  h2.title.advantages__title
+    | be first with
+    span nft assets
+
+  .advantages__flex
+    .advantages__slider
+      .advantages-swiper-container.swiper-container
+        .swiper-wrapper
+          each item in images
+            .swiper-slide.advantages__slide
+              img(src=item, alt="")
+
+      .pagination.advantages__slider-pagination
+      .advantages__slider-navigation
+        img(src="images/arrow.png", alt="").advantages__slider-next
+        img(src="images/arrow.png", alt="").advantages__slider-prev
+
+    .advantages__content
+      .advantages__content-subtitle About us
+      .advantages__content-title
+        span Some
+        | words about us
+      .advantages__content-text We love building and rebuilding brands through our  specific skills. Using colour, fonts, and illustration, we brand companies in a way they will never forget.
+      .advantages__content-items
+        each item in items
+          .advantages__content-item
+            span=item.name
+              |&nbsp;-
+            =item.text
+
+      a(href="").advantages__content-button Browse our work
+

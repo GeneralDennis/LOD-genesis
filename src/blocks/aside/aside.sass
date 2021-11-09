@@ -1,0 +1,19 @@
+.aside
+  position: fixed
+  top: 430px
+  right: 34px
+  z-index: 20
+
+  +max-w(1600)
+    top: 257px
+    right: 13px
+
+.aside__socials
+  top: 50px
+
+  .socials__link
+    &:not(:last-child)
+      margin-bottom: 23px
+
+  +max-w(960)
+    display: none

@@ -1,0 +1,37 @@
+.gallery
+  position: relative
+  width: 100%
+  height: 100%
+  img
+    display: block
+    width: 100%
+    height: auto
+    object-fit: contain
+
+  +max-w(960)
+    padding-top: 100px
+
+  +max-w(550)
+    padding-top: 58px
+
+
+.gallery__title
+  position: absolute
+  top: 245px
+  left: 50%
+  width: 100%
+  transform: translateX(-50%)
+
+  +max-w(1440)
+    top: 144px
+
+  +max-w(960)
+    top: 100px
+    span
+      display: block
+      margin-top: 18px
+
+  +max-w(550)
+    top: 58px
+    span
+      margin-top: 10px

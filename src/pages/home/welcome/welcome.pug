@@ -1,0 +1,67 @@
+-
+  var items =
+    [
+      {
+        name: 'BullPerks',
+        date: 'September 17',
+        rise: '333,333,333 CHIM'
+      },
+      {
+        name: 'BullPerks',
+        date: 'September 17',
+        rise: '333,333,333 CHIM'
+      },
+      {
+        name: 'BullPerks',
+        date: 'September 17',
+        rise: '333,333,333 CHIM'
+      },
+    ]
+
+
+section.welcome
+  .welcome__content
+    img(src="images/ART.png", alt="")
+    .welcome__text
+      h1.welcome__title
+        | wELCOME on
+        p
+          | Live or die
+          span genesis
+
+      p.welcome__subtitle
+        | We are a digital agency with
+        span years of experience
+        | and with
+        span extraordinary people
+
+    .welcome__sales
+      .welcome__sales-title sales
+
+      each item in items
+        .welcome__sales-item
+          .welcome__sales-name=item.name
+          .welcome__sales-date
+            | Private Sale Date:
+            span=item.date
+          .welcome__sales-rise
+            | Total Rise:
+            span=item.rise
+
+      a(href="").welcome__buy buy
+
+  .welcome__bottom
+    .welcome__sales.welcome__sales--bottom
+      .welcome__sales-title sales
+
+      each item in items
+        .welcome__sales-item
+          .welcome__sales-name=item.name
+          .welcome__sales-date
+            | Private Sale Date:
+            span=item.date
+          .welcome__sales-rise
+            | Total Rise:
+            span=item.rise
+
+      a(href="").welcome__buy buy

@@ -1,0 +1,73 @@
+.footer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  padding: 38px 240px
+  background: #222222
+
+  +max-w(1440)
+    padding: 24px 75px
+
+  +max-w(768)
+    flex-direction: column-reverse
+    padding: 0
+    background: #fff
+
+.footer__copy
+  font-size: 15px
+  color: #b2b2b2
+  text-transform: uppercase
+  letter-spacing: 0.3px
+  span
+    padding-left: 6px
+    font-weight: 700
+
+  +max-w(1280)
+    font-size: 9px
+
+  +max-w(768)
+    width: 100%
+    padding: 42px 0
+    text-align: center
+    font-size: 15px
+    color: #b0b0b0
+
+  +max-w(480)
+    padding: 25px 0
+    font-size: 9px
+
+.footer__socials
+  display: flex
+
+  .socials__link
+    height: 40px
+    width: 40px
+    &:not(:last-child)
+      margin-right: 18px
+
+    +max-w(1280)
+      height: 24px
+      width: 24px
+      &:not(:last-child)
+        margin-right: 10px
+
+  +max-w(768)
+    width: 100%
+    padding: 38px 0
+    background: #222222
+    justify-content: center
+
+    .socials__link
+      height: 40px
+      width: 40px
+      &:not(:last-child)
+        margin-right: 18px
+
+  +max-w(480)
+    padding: 23px 0
+    .socials__link
+      height: 24px
+      width: 24px
+      &:not(:last-child)
+        margin-right: 10px

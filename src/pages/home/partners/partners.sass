@@ -1,0 +1,90 @@
+.partners
+  padding: 165px 0 94px
+  background: url('partners-bg.png') 50% 50% no-repeat
+  background-size: cover
+
+  +max-w(1280)
+    padding: 120px 0 76px
+
+  +max-w(1024)
+    padding: 98px 0 56px
+
+  +max-w(768)
+    padding: 86px 0 75px
+
+  +max-w(480)
+    padding: 50px 0 45px
+
+.partners__title
+  margin-bottom: 144px
+
+  +max-w(1280)
+    margin-bottom: 114px
+
+  +max-w(1024)
+    margin-bottom: 86px
+
+  +max-w(768)
+    margin-bottom: 96px
+
+  +max-w(480)
+    margin-bottom: 56px
+
+.partners__slider
+  max-width: 1210px
+  width: 100%
+  margin: 0 auto 130px
+
+  +max-w(1280)
+    max-width: 1024px
+    margin-bottom: 100px
+
+  +max-w(1024)
+    max-width: 724px
+    margin-bottom: 77px
+
+  +max-w(768)
+    max-width: 600px
+    margin-bottom: 80px
+
+  +max-w(640)
+    max-width: 440px
+    margin-bottom: 94px
+
+  +max-w(480)
+    max-width: unset
+    margin-bottom: 52px
+
+.partners__slide
+  display: flex
+  align-items: baseline
+  justify-content: space-between
+
+  +max-w(768)
+    flex-wrap: wrap
+
+  +max-w(480)
+    padding: 0 50px
+
+
+.partners__slide-link
+  display: block
+
+  +max-w(1280)
+    &:not(:last-child)
+      margin-right: 25px
+
+  +max-w(768)
+    &:not(:last-child)
+      margin-right: 0
+      margin-bottom: 57px
+    &:nth-child(3)
+      width: 100%
+      text-align: center
+
+  +max-w(640)
+    img
+      width: 112px
+
+.partners__pagination
+  margin: 0 auto
